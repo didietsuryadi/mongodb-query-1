@@ -214,3 +214,34 @@ output:
 	"department" : DBRef("department", ObjectId("58b6364260f3a0eac681ad1f"), "academic")
 }
 ```
+
+### 10. Menampilkan key `name` dan `address` dalam collection ```student```.
+
+input:
+```
+db.student.find({},{"name": 1,"address": 1}).pretty();
+```
+
+output:
+```
+{
+	"_id" : ObjectId("58b6353b60f3a0eac681ad1c"),
+	"name" : "Didit Suryadi",
+	"address" : "kemanggisan ilir 3"
+}
+{
+	"_id" : ObjectId("58b637601259b55674c8a839"),
+	"name" : "Didit Suryadi",
+	"address" : "Jalan Surya Kencana, Bogor"
+}
+{
+	"_id" : ObjectId("58b637601259b55674c8a83a"),
+	"name" : "Didit Suryadi",
+	"address" : "Jalan kemanggisan ilir 3"
+}
+{
+	"_id" : ObjectId("58b637601259b55674c8a83b"),
+	"name" : "Aditya Kesuma",
+	"address" : "Bogor"
+}
+```
