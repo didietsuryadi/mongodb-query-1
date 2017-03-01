@@ -38,3 +38,15 @@ output:
 > use academic
 switched to db academic
 ```
+
+### 4. Membuat collection `departemen`.
+
+input:
+
+`> db.createCollection("department")`
+
+output:
+
+```
+{ "ok" : 1 }
+```
