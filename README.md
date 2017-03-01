@@ -25,3 +25,16 @@ output:
 > show collections
 >
 ```
+
+### 3. Membuat atau mengaktifkan database
+
+input:
+
+`use academic`
+
+output:
+
+```
+> use academic
+switched to db academic
+```
