@@ -261,3 +261,72 @@ output:
 	"address" : "Bogor"
 }
 ```
+### 12. Menampilkan semua data ```student``` secara urut berdasarkan ```name``` dengan ```sort()``` secara ascending maupun descending.
+
+input:
+```
+db.student.find().sort({name:1}).pretty();
+db.student.find().sort({name:-1}).pretty();
+```
+
+output:
+```
+{
+	"_id" : ObjectId("58b637601259b55674c8a83b"),
+	"nim" : "256789332",
+	"name" : "Aditya Kesuma",
+	"address" : "Bogor",
+	"department" : DBRef("department", ObjectId("58b6364260f3a0eac681ad1f"), "academic")
+}
+{
+	"_id" : ObjectId("58b6353b60f3a0eac681ad1c"),
+	"nim" : "21210018006",
+	"name" : "Didit Suryadi",
+	"address" : "kemanggisan ilir 3",
+	"department" : "FT"
+}
+{
+	"_id" : ObjectId("58b637601259b55674c8a839"),
+	"nim" : "21212018",
+	"name" : "Didit Suryadi",
+	"address" : "Jalan Surya Kencana, Bogor",
+	"department" : DBRef("department", ObjectId("58901756ca49c7522b60680f"), "academic")
+}
+{
+	"_id" : ObjectId("58b637601259b55674c8a83a"),
+	"nim" : "2001600595",
+	"name" : "Didit Suryadi",
+	"address" : "Jalan kemanggisan ilir 3",
+	"department" : DBRef("department", ObjectId("58b6364260f3a0eac681ad21"), "academic")
+}
+```
+```
+{
+	"_id" : ObjectId("58b6353b60f3a0eac681ad1c"),
+	"nim" : "21210018006",
+	"name" : "Didit Suryadi",
+	"address" : "kemanggisan ilir 3",
+	"department" : "FT"
+}
+{
+	"_id" : ObjectId("58b637601259b55674c8a839"),
+	"nim" : "21212018",
+	"name" : "Didit Suryadi",
+	"address" : "Jalan Surya Kencana, Bogor",
+	"department" : DBRef("department", ObjectId("58901756ca49c7522b60680f"), "academic")
+}
+{
+	"_id" : ObjectId("58b637601259b55674c8a83a"),
+	"nim" : "2001600595",
+	"name" : "Didit Suryadi",
+	"address" : "Jalan kemanggisan ilir 3",
+	"department" : DBRef("department", ObjectId("58b6364260f3a0eac681ad21"), "academic")
+}
+{
+	"_id" : ObjectId("58b637601259b55674c8a83b"),
+	"nim" : "256789332",
+	"name" : "Aditya Kesuma",
+	"address" : "Bogor",
+	"department" : DBRef("department", ObjectId("58b6364260f3a0eac681ad1f"), "academic")
+}
+```
