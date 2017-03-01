@@ -80,3 +80,49 @@ name string
 address string
 department string
 ```
+
+### 7. Menginputkan 5 data ke dalam collection `departemen`.
+
+```
+db.department.insert([
+  {
+    code: "FTI",
+    name: "Fakultas Teknik Informatika",
+    major: [{name: "Sistem Informasi"},{name: "Teknik Informatika"}]
+  },
+  {
+    code: "FEK",
+    name: "Fakultas Ekonomi dan Komunikasi",
+    major:[{name: "Akuntansi"}, {name: "Keuangan"}, {name: "Komunikasi Pemasaran"}]
+  },
+  {
+    code: "SD",
+    name: "Sekolah Design",
+    major: [{name: "Desain Interior"},{name: "Desain Komunikasi Visual"},{name: "Desain Komunikasi Visual Media Baru"}]
+  },
+  {
+    code: "SBM",
+    name: "Sekolah Bisnis dan Manajemen",
+    major:[{name: "Bisnis & Manajemen Internasional"}, {name: "Manajeman"}, {name: "Pemasaran Internasional"}]
+  },
+  {
+    code: "FT",
+    name: "Fakultas Teknik",
+    major: [{name: "Arsitektur"},{name: "Teknik Industri"},{name: "Teknik Komputer"}]
+  }]
+  );
+```
+output:
+
+```
+BulkWriteResult({
+       	"writeErrors" : [ ],
+       	"writeConcernErrors" : [ ],
+       	"nInserted" : 5,
+       	"nUpserted" : 0,
+       	"nMatched" : 0,
+       	"nModified" : 0,
+       	"nRemoved" : 0,
+       	"upserted" : [ ]
+})
+```
