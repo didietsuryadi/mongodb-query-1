@@ -330,3 +330,170 @@ output:
 	"department" : DBRef("department", ObjectId("58b6364260f3a0eac681ad1f"), "academic")
 }
 ```
+### 13. Menampilkan semua data ```department``` secara urut berdasarkan ```name``` secara ascending maupun descending.
+
+input:
+```
+db.department.find().sort({name:1}).pretty();
+db.department.find().sort({name:-1}).pretty();
+```
+
+output:
+```
+{
+	"_id" : ObjectId("58b6364260f3a0eac681ad1e"),
+	"code" : "FEK",
+	"name" : "Fakultas Ekonomi dan Komunikasi",
+	"major" : [
+		{
+			"name" : "Akuntansi"
+		},
+		{
+			"name" : "Keuangan"
+		},
+		{
+			"name" : "Komunikasi Pemasaran"
+		}
+	]
+}
+{
+	"_id" : ObjectId("58b6364260f3a0eac681ad21"),
+	"code" : "FT",
+	"name" : "Fakultas Teknik",
+	"major" : [
+		{
+			"name" : "Arsitektur"
+		},
+		{
+			"name" : "Teknik Industri"
+		},
+		{
+			"name" : "Teknik Komputer"
+		}
+	]
+}
+{
+	"_id" : ObjectId("58b6364260f3a0eac681ad1d"),
+	"code" : "FTI",
+	"name" : "Fakultas Teknik Informatika",
+	"major" : [
+		{
+			"name" : "Sistem Informasi"
+		},
+		{
+			"name" : "Teknik Informatika"
+		}
+	]
+}
+{
+	"_id" : ObjectId("58b6364260f3a0eac681ad20"),
+	"code" : "SBM",
+	"name" : "Sekolah Bisnis dan Manajemen",
+	"major" : [
+		{
+			"name" : "Bisnis & Manajemen Internasional"
+		},
+		{
+			"name" : "Manajeman"
+		},
+		{
+			"name" : "Pemasaran Internasional"
+		}
+	]
+}
+{
+	"_id" : ObjectId("58b6364260f3a0eac681ad1f"),
+	"code" : "SD",
+	"name" : "Sekolah Design",
+	"major" : [
+		{
+			"name" : "Desain Interior"
+		},
+		{
+			"name" : "Desain Komunikasi Visual"
+		},
+		{
+			"name" : "Desain Komunikasi Visual Media Baru"
+		}
+	]
+}
+```
+```
+{
+	"_id" : ObjectId("58b6364260f3a0eac681ad1f"),
+	"code" : "SD",
+	"name" : "Sekolah Design",
+	"major" : [
+		{
+			"name" : "Desain Interior"
+		},
+		{
+			"name" : "Desain Komunikasi Visual"
+		},
+		{
+			"name" : "Desain Komunikasi Visual Media Baru"
+		}
+	]
+}
+{
+	"_id" : ObjectId("58b6364260f3a0eac681ad20"),
+	"code" : "SBM",
+	"name" : "Sekolah Bisnis dan Manajemen",
+	"major" : [
+		{
+			"name" : "Bisnis & Manajemen Internasional"
+		},
+		{
+			"name" : "Manajeman"
+		},
+		{
+			"name" : "Pemasaran Internasional"
+		}
+	]
+}
+{
+	"_id" : ObjectId("58b6364260f3a0eac681ad1d"),
+	"code" : "FTI",
+	"name" : "Fakultas Teknik Informatika",
+	"major" : [
+		{
+			"name" : "Sistem Informasi"
+		},
+		{
+			"name" : "Teknik Informatika"
+		}
+	]
+}
+{
+	"_id" : ObjectId("58b6364260f3a0eac681ad21"),
+	"code" : "FT",
+	"name" : "Fakultas Teknik",
+	"major" : [
+		{
+			"name" : "Arsitektur"
+		},
+		{
+			"name" : "Teknik Industri"
+		},
+		{
+			"name" : "Teknik Komputer"
+		}
+	]
+}
+{
+	"_id" : ObjectId("58b6364260f3a0eac681ad1e"),
+	"code" : "FEK",
+	"name" : "Fakultas Ekonomi dan Komunikasi",
+	"major" : [
+		{
+			"name" : "Akuntansi"
+		},
+		{
+			"name" : "Keuangan"
+		},
+		{
+			"name" : "Komunikasi Pemasaran"
+		}
+	]
+}
+```
