@@ -245,3 +245,19 @@ output:
 	"address" : "Bogor"
 }
 ```
+### 11. Menampilkan key ```StudentId```, ```name```, dan ```address``` dari data student yang mempunyai ```studentId``` tertentu.
+
+input:
+```
+db.student.find({nim:"256789332"},{"nim": 1,"name": 1,"address":1}).pretty();
+```
+
+output:
+```
+{
+	"_id" : ObjectId("58b637601259b55674c8a83b"),
+	"nim" : "256789332",
+	"name" : "Aditya Kesuma",
+	"address" : "Bogor"
+}
+```
