@@ -50,3 +50,15 @@ output:
 ```
 { "ok" : 1 }
 ```
+
+### 5. Membuat collection `student`.
+
+input:
+
+`> db.createCollection("student")`
+
+output:
+
+```
+{ "ok" : 1 }
+```
