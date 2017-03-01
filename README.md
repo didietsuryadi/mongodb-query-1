@@ -126,3 +126,55 @@ BulkWriteResult({
        	"upserted" : [ ]
 })
 ```
+
+### 8. Menginputkan 3 data ke dalam collection `student` beserta reference ke `departemen`.
+
+input:
+```
+db.student.insert([
+  {
+    nim: "21212018",
+    name: "Didit Suryadi",
+    address: "Jalan Surya Kencana, Bogor",
+    department: {
+      $ref : "department",
+      $id : ObjectId("58901756ca49c7522b60680f"),
+      $db : "academic"
+    }
+  },
+  {
+    nim: "2001600595",
+    name: "Didit Suryadi",
+    address: "Jalan kemanggisan ilir 3",
+    department: {
+      $ref : "department",
+      $id : ObjectId("58b6364260f3a0eac681ad21"),
+      $db : "academic"
+    }
+  },
+  {
+    nim: "256789332",
+    name: "Aditya Kesuma",
+    address: "Bogor",
+    department: {
+      $ref : "department",
+      $id : ObjectId("58b6364260f3a0eac681ad1f"),
+      $db : "academic"
+    }
+  },
+  ]);
+```
+output:
+
+```
+BulkWriteResult({
+       	"writeErrors" : [ ],
+       	"writeConcernErrors" : [ ],
+       	"nInserted" : 3,
+       	"nUpserted" : 0,
+       	"nMatched" : 0,
+       	"nModified" : 0,
+       	"nRemoved" : 0,
+       	"upserted" : [ ]
+})
+```
