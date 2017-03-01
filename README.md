@@ -62,3 +62,21 @@ output:
 ```
 { "ok" : 1 }
 ```
+
+### 6. Melihat struktur collection `student`.
+
+input:
+```
+> db.student.insert({nim:"21210018006", name:"Didit Suryadi", address:"kemanggisan ilir 3", department:"FT"})
+> var schema = db.student.findOne()
+> for(var key in schema){print (key, typeof key);}
+```
+
+output:
+```
+_id string
+nim string
+name string
+address string
+department string
+```
