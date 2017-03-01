@@ -497,3 +497,18 @@ output:
 	]
 }
 ```
+### 14. Mencari data ```student``` dengan ```name```.
+
+input:
+`db.student.find({name:"Aditya Kesuma"}).pretty()`
+
+output:
+```
+{
+	"_id" : ObjectId("58b637601259b55674c8a83b"),
+	"nim" : "256789332",
+	"name" : "Aditya Kesuma",
+	"address" : "Bogor",
+	"department" : DBRef("department", ObjectId("58b6364260f3a0eac681ad1f"), "academic")
+}
+```
